@@ -145,7 +145,7 @@ model.summary()
 class_names = list(train_gen.class_indices.keys())
 print(class_names)
 batch_size = 64   # set batch size for training
-epochs = 10   # number of all epochs in training
+epochs = 15  # number of all epochs in training
 
 history = model.fit(x= train_gen, epochs= epochs, verbose= 1, validation_data= valid_gen, 
                     validation_steps= None, shuffle= False)
@@ -187,4 +187,4 @@ preds = model.predict(test_gen)
 y_pred = np.argmax(preds, axis=1)
 
 print(classification_report(test_gen.classes, y_pred, target_names= classes))
-model.save('chest_x-raysResNet50-V1_10.h5')
+model.save('chest_x-raysResNet50-V2_15.h5')

@@ -185,3 +185,6 @@ print("Test Accuracy: ", test_score[1])
 
 preds = model.predict(test_gen)
 y_pred = np.argmax(preds, axis=1)
+
+print(classification_report(test_gen.classes, y_pred, target_names= classes))
+model.save('chest_x-raysResNet50-V1_10.h5')

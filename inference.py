@@ -5,10 +5,10 @@ import os
 
 # Define constants
 IMG_SIZE = (224, 224)  # Match the size used during training
-CLASS_NAMES = ['Pleural', 'Cardiomegaly']  # Match the class names from training
+CLASS_NAMES = ['COVID', 'Cardiomegaly', 'Lung_Opacity', 'NORMAL', 'PNEUMONIA', 'Pleural', 'TURBERCULOSIS'] # Match the class names from training
 
 # Load the trained model
-MODEL_PATH = 'path/to/saved_model.h5'  # Replace with your saved model path
+MODEL_PATH = 'chest_x-raysResNet50-V1_10.h5'  # Replace with your saved model path
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # Function to preprocess a single image
@@ -31,7 +31,7 @@ def predict_image(image_path):
 # Example usage
 if __name__ == '__main__':
     # Path to the directory containing test images
-    TEST_IMAGE_DIR = 'path/to/test_images/'  # Replace with your test image directory
+    TEST_IMAGE_DIR = 'chest_xray/test/COVID'  # Replace with your test image directory
 
     # Iterate over test images and make predictions
     for image_name in os.listdir(TEST_IMAGE_DIR):

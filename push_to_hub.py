@@ -1,6 +1,5 @@
 import argparse
 from huggingface_hub import HfApi, HfFolder
-import torch
 
 class HuggingFaceUploader:
     def __init__(self, hf_token, repo_name, local_folder_path):

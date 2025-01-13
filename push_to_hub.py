@@ -10,7 +10,6 @@ class HuggingFaceUploader:
         self.hf_api = HfApi(token=self.hf_token)
         
         self.hf_folder.save_token(self.hf_token)
-        self.available_gpus = torch.cuda.device_count()
         
     def upload_folder(self, repo_type='model'):
         full_repo_name = f"mohit9999/{self.repo_name}"

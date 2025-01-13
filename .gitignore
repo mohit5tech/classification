@@ -13,6 +13,8 @@ develop-eggs/
 dist/
 downloads/
 eggs/
+DATASET/
+chest_xray/
 .eggs/
 lib/
 lib64/

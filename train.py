@@ -145,7 +145,7 @@ model.summary()
 class_names = list(train_gen.class_indices.keys())
 print(class_names)
 batch_size = 64   # set batch size for training
-epochs = 15  # number of all epochs in training
+epochs = 10  # number of all epochs in training
 
 history = model.fit(x= train_gen, epochs= epochs, verbose= 1, validation_data= valid_gen, 
                     validation_steps= None, shuffle= False)
